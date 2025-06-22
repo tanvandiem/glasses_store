@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Glasses Store</string>
+    <string name="makeup">Makeup tutorial</string>
+    <string name="glasses">Thử kính AR</string>
+    <string name="glasse">Mô hình 3D</string>
+    <string name="regions">Quiz tutorial</string>
+    <string name="face_landmarks">Face landmarks</string>
+    <string name="quiz_title">What animal are you?</string>
+    <string name="home">Trang chính</string>
+    <string name="favorites">Đơn hàng</string>
+    <string name="profile">Tôi</string>
+    <string name="cart">Giỏ hàng</string>
+</resources>

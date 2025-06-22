@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:id="@+id/scrollViewContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnAddCart"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="16dp">
+
+            <!-- Product Image -->
+            <ImageView
+                android:id="@+id/ivDetailImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:src="@drawable/test_image"
+                android:contentDescription="product_image" />
+
+            <!-- Product Name + Glasses Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/tvDetailName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:text="Nike Club Max"
+                    android:textStyle="bold"
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/button_glasses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/glasses" />
+                <Button
+                    android:id="@+id/button_glasse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/glasse" />
+            </LinearLayout>
+
+            <!-- Product Price -->
+            <TextView
+                android:id="@+id/tvDetailPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$64.95"
+                android:textSize="20sp"
+                android:textColor="#FF5722"
+                android:layout_marginTop="8dp" />
+
+
+            <!-- Product Description -->
+            <TextView
+                android:id="@+id/tvDetailDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Premium quality product with comfortable fit and durable materials."
+                android:textSize="16sp"
+                android:textColor="#616161"
+                android:layout_marginTop="12dp"
+                android:lineSpacingExtra="4dp" />
+            <!-- Product Size -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kích thước:"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+
+                <RadioGroup
+                    android:id="@+id/rgSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <RadioButton
+                        android:id="@+id/rbSizeS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="S"
+                        android:layout_marginEnd="16dp"
+                        android:minHeight="48dp"
+                        android:minWidth="48dp"
+                        android:padding="8dp"
+                        android:textColor="#000000"
+                        android:buttonTint="#000000" />
+
+                    <RadioButton
+                        android:id="@+id/rbSizeM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="M"
+                        android:layout_marginEnd="16dp"
+                        android:minHeight="48dp"
+                        android:minWidth="48dp"
+                        android:padding="8dp"
+                        android:textColor="#000000"
+                        android:buttonTint="#000000" />
+
+                    <RadioButton
+                        android:id="@+id/rbSizeL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="L"
+                        android:layout_marginEnd="16dp"
+                        android:minHeight="48dp"
+                        android:minWidth="48dp"
+                        android:padding="8dp"
+                        android:textColor="#000000"
+                        android:buttonTint="#000000" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <!-- Quantity Selector -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Số lượng:"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btnDecrease"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_minus"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="decrease_quantity" />
+
+
+                    <TextView
+                        android:id="@+id/tvQuantity"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:text="1"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:textColor="#000000" />
+
+                    <ImageButton
+                        android:id="@+id/btnIncrease"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_plus"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="increase_quantity" />
+
+
+                    <TextView
+                        android:id="@+id/tvStock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kho:"
+                        android:textSize="16sp"
+                        android:textColor="#777777"
+                         />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Size Selector -->
+
+
+            <!-- Có thể thêm khoảng trống dưới để không bị che bởi nút -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginTop="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Fixed Add to Cart Button -->
+    <!-- Fixed Add to Cart Button -->
+    <Button
+        android:id="@+id/btnAddCart"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Thêm vào giỏ hàng"
+        android:textColor="#FFFFFF"
+        android:background="@android:color/black"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:elevation="6dp" />
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Solid background (white in this case) -->
+    <solid android:color="#FFFFFF" />
+
+    <!-- Border settings (1dp gray border) -->
+    <stroke
+        android:width="1dp"
+        android:color="#DDDDDD" />
+
+    <!-- Rounded corners (4dp radius) -->
+    <corners android:radius="4dp" />
+
+    <!-- Padding to prevent text from touching the edges -->
+    <padding
+        android:left="4dp"
+        android:top="4dp"
+        android:right="4dp"
+        android:bottom="4dp" />
+</shape>
